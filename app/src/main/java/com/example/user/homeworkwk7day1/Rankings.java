@@ -40,7 +40,14 @@ public class Rankings {
         return rankings[rank-1];
     }
 
-
+    public String findByName(String name){
+        for (Athlete athlete : rankings) {
+            if (athlete.getName().equals (name)){
+               return athlete.toString();
+            }
+        }
+        return "Athlete not found.";
+    }
 
 
 

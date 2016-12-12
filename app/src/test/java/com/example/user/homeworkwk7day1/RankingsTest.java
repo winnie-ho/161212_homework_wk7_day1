@@ -40,7 +40,7 @@ public class RankingsTest {
     }
 //
     @Test
-    public void returnAthleteByIndex(){
+    public void returnAthleteByIndexTest(){
         rankings.addAthlete(athlete1);
         rankings.addAthlete(athlete2);
         rankings.addAthlete(athlete5);
@@ -48,9 +48,19 @@ public class RankingsTest {
     }
 
     @Test
-    public void addAthleteToEndOfRankings(){
+    public void addAthleteToEndOfRankingsTest(){
         rankings.addAthlete(athlete10);
         rankings.addAthlete(athlete10_2);
         assertEquals("Ida Antoinette Nana Djimou", rankings.findAthlete(10).getName());
     }
+
+    @Test
+    public void findAthleteByNameTest(){
+        rankings.addAthlete(athlete1);
+        rankings.addAthlete(athlete2);
+        rankings.addAthlete(athlete5);
+        assertEquals("Name: Brianne Theisan Eaton, Nationality: Canadian, Ranking: 1", rankings.findByName("Brianne Theisan Eaton"));
+    }
+
+
 }
